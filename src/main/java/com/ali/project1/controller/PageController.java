@@ -20,4 +20,11 @@ public class PageController {
 		ModelAndView mv=new ModelAndView("login");
 		return mv;
 	}
+	
+	@RequestMapping(value="/productlist")
+	public ModelAndView productList()
+	{
+		ModelAndView mv=new ModelAndView("product");
+		return mv;
+	}
 }
