@@ -2,12 +2,17 @@ package com.ali.project1.daoImpl;
 
 import java.util.*;
 
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ali.project1.dao.*;
 import com.ali.project1.model.*;
 @Repository("productDao")
+@Transactional
 public class ProductDaoImpl implements ProductDao {
+	/*
 	static List<Product> prdList;
 	static {
 		prdList = new ArrayList<Product>();
@@ -44,21 +49,25 @@ public class ProductDaoImpl implements ProductDao {
 		prdList.add(p3);
 		prdList.add(p4);
 	}
-
+*/
+	@Autowired
+	private SessionFactory sessionFactory;
+	
 	public List<Product> getAll() {
 
-		return prdList;
+		return sessionFactory.getCurrentSession().createQuery("from Product",Product.class).list();
 	}
 
 	public Product getProduct(int id) {
-		for(Product p : prdList)
+		/*for(Product p : prdList)
 		{
 			if(p.getId()==id)
 			{
 				return p;
 			}
 		}
-		return null;
+		return null;*/
+		return sessionFactory.getCurrentSession().get(Product.class,id);
 	}
 
 }

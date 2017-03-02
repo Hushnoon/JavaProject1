@@ -1,15 +1,27 @@
 package com.ali.project1.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Product {
 	
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private String desc;
 	private String brand;
 	private float price;
 	private int qty;
+	private String pics;
 
+
+	public String getPics() {
+		return pics;
+	}
+	public void setPics(String pics) {
+		this.pics = pics;
+	}
 	public int getId() {
 		return id;
 	}
@@ -46,6 +58,5 @@ public class Product {
 	public void setQty(int qty) {
 		this.qty = qty;
 	}
-	
 	
 }

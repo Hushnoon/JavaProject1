@@ -1,0 +1,5 @@
+com\ali\project1\controller\PageController.class
+com\ali\project1\model\Product.class
+com\ali\project1\controller\ProductController.class
+com\ali\project1\daoImpl\ProductDaoImpl.class
+com\ali\project1\dao\ProductDao.class
