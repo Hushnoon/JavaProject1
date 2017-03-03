@@ -4,6 +4,11 @@
 
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
+	  <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+  </listener>
 	<servlet>
 		<servlet-name>SpringDispatcher</servlet-name>
 		<servlet-class>
@@ -16,7 +21,5 @@
 		<servlet-name>SpringDispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoderListener</listener-class>
-	</listener>
+	
 </web-app>

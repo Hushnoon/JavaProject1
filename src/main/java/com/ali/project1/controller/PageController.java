@@ -21,6 +21,13 @@ public class PageController {
 		return mv;
 	}
 	
+	@RequestMapping(value="/register")
+	public ModelAndView register()
+	{
+		ModelAndView mv=new ModelAndView("register");
+		return mv;
+	}
+	
 	@RequestMapping(value="/productlist")
 	public ModelAndView productList()
 	{

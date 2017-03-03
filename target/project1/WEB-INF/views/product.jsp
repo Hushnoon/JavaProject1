@@ -14,6 +14,7 @@
 		<!-- reference of custom resource -->
 		<s:url value="/resources/css" var="css"/>
 		<s:url value="/resources/js" var="js"/>
+		<s:url value="/resources/images" var="images"/>
 		
 		<!-- links of custom css and js -->
 		<link rel="stylesheet" href="${css}/dataTables.bootstrap.css"/>
@@ -32,6 +33,9 @@
 				<th>Brand</th>
 				<th>Price</th>
 				<th>Quantity</th>
+				<th>Image</th>
+				<th></th>
+				
 			</thead>
 		</table>
 	</div>

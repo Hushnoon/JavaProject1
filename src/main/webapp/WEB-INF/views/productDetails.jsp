@@ -14,12 +14,44 @@
 		<!-- reference of custom resource -->
 		<s:url value="/resources/images" var="images"/>
 		
+		<style type="text/css">
+		.jumbotron
+		{
+			background-color: #5D6D7E;
+			color:white;
+		}
+		.productimg
+		{
+			background-color:white;
+			border-style:solid #ABB2B9;
+		}
+		.page-header
+		{
+			border-color:black;
+			border-width:6px;
+			color:#6C3483;
+			font-style:bold;
+		}
+	</style>
 		
 	</head>
 
-	<body>
-	<div class="col-md-offset-2 col-md-5">
-		<img src="${images}/${prd.pics}.JPG"/>
-	</div>
+	<body background="${images}/background.jpg">
+		<div class="container">
+			<div class="row productimg">
+				<div class="col-md-offset-1 col-md-5">
+					<center><img src="${images}/${prd.pics}.JPG"/></center>
+				</div>
+				<div class="col-md-5 ">
+					<ul>
+						<li><h3>Product Name:</h3>${prd.name}</li>
+						<li><h3>Product Brand:</h3>${prd.brand}</li>
+						<li><h3>Product Description:</h3>${prd.desc}</li>
+						<li><h3>Product Price:</h3>${prd.price}</li>
+						<li><h3>Availability:</h3>${prd.qty}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

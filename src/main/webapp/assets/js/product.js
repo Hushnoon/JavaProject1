@@ -38,7 +38,7 @@ $(function() {
 									mRender : function(data, type, row) {
 										return '<a class="btn btn-primary" href="/project1/products/showproduct/'
 												+ data.id
-												+ '">View Item</a> &nbsp;<a class="btn btn-primary" href="'
+												+ '">View Item</a> &nbsp;&nbsp;<a class="btn btn-primary" href="'
 												+ data + '">Add To Cart</a> ';
 									}
 								} ]
